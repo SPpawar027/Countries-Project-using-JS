@@ -1,0 +1,74 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Nunito;
+}
+
+header {
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+}
+
+.header-content {
+    padding: 20px;
+    margin-inline: auto;
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+main {
+     margin-top: 50px;
+    margin-inline: auto;
+    max-width: 1200px;
+    /* background-color: pink; */
+    padding-inline: 24px;
+}
+
+.countries-container{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 24px;
+    
+}
+.country-card {
+    display: inline-block;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    border-radius: 8px;
+    width: 250px;
+    cursor: pointer;
+    padding-bottom: 20px;
+    transition:transform 0.3s ease-in-out;
+}
+.country-card:hover {
+    transform: scale(1.03);
+        box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.3);
+
+}
+
+.country-card img {
+    margin-bottom: 8px;
+    max-width: 100%;
+    height: 170px;
+}
+.country-card h3{
+    margin-bottom: 10px;
+}
+.country-card p{
+    margin-bottom:5px;
+}
+.cardtxt{
+    padding: 15px 25px;
+}
+.card-title{
+     font-size: 24px;
+     margin-bottom: 10px;
+}
