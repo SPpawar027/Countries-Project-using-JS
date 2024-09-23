@@ -32,8 +32,10 @@ a {
     justify-content: space-between;
 }
 
+
 .country-detail {
-    max-width: 1300px;
+    max-width: 1200px;
+    margin-inline: auto;
     padding: 20px;
 }
 

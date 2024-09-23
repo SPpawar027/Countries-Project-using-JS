@@ -8,11 +8,12 @@ const region = document.querySelector(".region")
 const subRegion = document.querySelector(".subRegion")
 const capt = document.querySelector(".capt")
 const conti = document.querySelector(".conti")
+const lang = document.querySelector(".lang")
 const border2 = document.querySelector(".border2")
 fetch(`https://restcountries.com/v3.1/name/${countryName}?fullText=true`)
    .then((res) => res.json())
    .then(([country]) => {
-      // console.log(country.borders);
+      // console.log(Object.values(country.languages).join(" , "));
 
       img.src = country.flags.svg
       countryHeading.innerHTML = country.name.common
@@ -28,6 +29,9 @@ fetch(`https://restcountries.com/v3.1/name/${countryName}?fullText=true`)
       subRegion.innerHTML = country.subregion
       capt.innerHTML = country.capital
       conti.innerHTML = country.continents
+      if(country.languages){
+         lang.innerHTML = Object.values(country.languages).join(" , ")
+      }
       if (country.borders) {
          country.borders.forEach(border => {
             fetch(`https://restcountries.com/v3.1/alpha/${border}`)
@@ -36,7 +40,7 @@ fetch(`https://restcountries.com/v3.1/name/${countryName}?fullText=true`)
                   const bordertag = document.createElement("a")
                   bordertag.innerHTML = borderdata.name.common
                   bordertag.href = `country.html?name=${borderdata.name.common}`
-                  console.log(bordertag);
+                  // console.log(bordertag);
                   border2.append(bordertag);
                })
 

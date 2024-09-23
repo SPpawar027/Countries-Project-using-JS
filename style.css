@@ -5,17 +5,32 @@
 }
 
 body {
+    --background-color: white;
+    --text-color: black;
+    --element-color: white;
     font-family: Nunito;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+body.dark {
+    --background-color: hsla(208, 27%, 14%, 0.841);
+    --text-color: white;
+    --element-color: hsl(209, 23%, 22%);
+
 }
 
 header {
     box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.2);
     margin-bottom: 20px;
+    background-color: var(--background-color);
+    color: var(--text-color);
 }
 
 a {
     text-decoration-line: none;
     color: black;
+    color: var(--text-color);
 }
 
 .header-content {
@@ -26,22 +41,62 @@ a {
     align-items: center;
     justify-content: space-between;
 }
+.header-content p{
+    cursor: pointer;
+}
 
 main {
     margin-top: 50px;
     margin-inline: auto;
     max-width: 1200px;
-    /* background-color: pink; */
+    background-color: var(--background-color);  
     padding-inline: 24px;
 }
 
+.search-fun input {
+    border: none;
+    outline: none;
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    width: 400px;
+    padding: 18px 35px;
+}
+
+.selectfilter select {
+    border: none;
+    outline: none;
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    padding: 12px 20px
+}
+
+.search-fun i {
+
+    font-size: 20px;
+    position: absolute;
+    margin: 14px 10px
+}
+
+.search-fun i::placeholder {
+    color: gray;
+}
+
+.search-filter-container {
+    margin-bottom: 50px;
+    /* background-color: red; */
+    display: flex;
+    justify-content: space-between;
+}
+
 .countries-container {
+    max-width: 1200px;
     margin-top: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 24px;
+    gap: 40px;
+    background-color: var(--background-color);
 
 }
 
@@ -55,6 +110,7 @@ main {
     cursor: pointer;
     padding-bottom: 20px;
     transition: transform 0.3s ease-in-out;
+    background-color: var(--element-color);
 }
 
 .country-card:hover {
@@ -91,8 +147,8 @@ main {
     .countries-container {
         max-width: 350px;
         margin-inline: auto;
-    
-      
+
+
         flex-wrap: wrap;
         gap: 24px;
     }
@@ -107,4 +163,17 @@ main {
     .country-card img {
         width: 100%;
     }
+
+    .search-filter-container {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .search-fun input {
+
+        max-width: 400px;
+        width: 100%;
+        padding: 18px 35px;
+    }
+
 }
