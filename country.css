@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Nunito;
+}
+
+a {
+    text-decoration-line: none;
+    color: black;
+}
+
+header {
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+}
+
+a {
+    text-decoration-line: none;
+    color: black;
+}
+
+.header-content {
+    padding: 20px;
+    margin-inline: auto;
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.country-detail {
+    max-width: 1300px;
+    padding: 20px;
+}
+
+.country-detail-content {
+    max-width: 1100px;
+    display: flex;
+    margin: auto;
+    align-items: center;
+}
+
+.imgdiv {
+    width: 500px;
+}
+
+
+.detailimg {
+    width: 80%;
+    margin-right: 60px;
+}
+
+.details {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+
+.leftdetail p {
+    margin-bottom: 20px;
+
+}
+
+.leftdetail {
+    width: 370px;
+
+    /* background-color: red; */
+}
+
+.leftdetail h2 {
+    font-size: 35px;
+    font-weight: 800;
+    margin-bottom: 30px;
+}
+
+.rightdetail p {
+    margin-bottom: 20px;
+}
+
+.border2 {
+    white-space: nowrap;
+   
+}
+
+.border2 a{
+    cursor: pointer;
+    margin-left: 10px;
+    padding: 4px 7px;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.2);
+}
+
+.backbtn {
+    width: 100px;
+    padding: 10px 20px;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    font-weight: 500;
+    font-size: 15px;
+   
+}
+
+.backbtn:hover {
+    transform: scale(1.03);
+}
+
+@media (max-width:850px) {
+    .country-detail-content {
+        width: 100%;
+        display: block;
+        margin: 0;
+
+    }
+
+    .backbtn {
+        margin: 0;
+        margin-bottom: 30px;
+    }
+
+    .details {
+        max-width: 450px;
+        margin-left: 5px;
+        display: block;
+        /* background-color: red; */
+
+    }
+
+    .leftdetail {
+        max-width: 100%
+    }
+
+    .imgdiv {
+        width: 100%;
+    }
+
+    .detailimg {
+        width: 100%;
+
+    }
+}

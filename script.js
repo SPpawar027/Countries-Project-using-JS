@@ -5,8 +5,9 @@ fetch("https://restcountries.com/v3.1/all")
     .then((res) => res.json())
     .then((data) => {
         data.forEach((country) => {
-            // console.log(country);
+            console.log(country);
             const countrycard = document.createElement("a");
+            countrycard.href = `/country.html?name=${country.name.common}`
             countrycard.classList.add("country-card")
             // countriescontainer.classList.add("countries-container")
 
@@ -17,7 +18,7 @@ fetch("https://restcountries.com/v3.1/all")
                     <h3 class='card-title'>${country.name.common}</h3>
                     <p><b>Population : </b>${country.population.toLocaleString('en-IN') }</p>
                     <p><b>Region : </b>${country.region}</p>
-                    <p><b>Capital : </b>${country.capital[0]}</p>
+                    <p><b>Capital : </b>${country.capital?.[0]}</p>
                 </div>
 `
             countriescontainer.append(countrycard)  

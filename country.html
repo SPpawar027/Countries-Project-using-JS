@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Country Detail</title>
+    <link rel="stylesheet" href="country.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,300,regular,500,600,700,800,900,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic"
+        rel="stylesheet" />
+</head>
+
+<body>
+    <header>
+        <div class="header-content">
+            <a href="/"><h2>Where in the world?</h2></a>
+            <p><i class="ri-moon-line"></i> &nbsp;&nbsp;Dark mode</p>
+        </div>
+    </header>
+    <main>
+
+        <div class="country-detail">
+            <button class='backbtn'><i class="ri-arrow-left-line"></i> back</button>
+            <div class="country-detail-content">
+                <div class="imgdiv">
+                    <img class="detailimg" src="" alt="">
+                </div>
+                <div class="details">
+                    <div class="leftdetail">
+                        <h2></h2>
+                        <p><b>Native name :</b><span class='native'></span> </p>
+                        <p><b>Population :</b><span class='popu'></span></p>
+                        <p><b>Region :</b> <span class='region'></span></p>
+                        <p><b>Sub Region : </b><span class='subRegion'></span></p>
+
+                        <p><b>Capital :</b><span class='capt'></span></p>
+                        <p class='border2'><b>Border countries :</b>
+                           
+                        </p>
+                    </div>
+                    <div class="rightdetail">
+                        <p><b>Curriencies :</b>
+                        <p class="currencyo"> </p>
+                        </p>
+                        <p><b>Continents :</b> <span class='conti'></span></p>
+                        <p><b>Languages :</b> ${Object.values(country[0].languages)[0]}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </main>
+
+    <script src='country.js'></script>
+</body>
+
+</html>
